@@ -1,0 +1,52 @@
+version: "3.7"
+
+services:
+  # https://github.com/OctoPrint/octoprint-docker
+  octoprint:
+    container_name: OctoPrint
+    image: octoprint/octoprint:latest
+    restart: always
+    environment:
+      ENABLE_MJPG_STREAMER: "true"
+      # Logitech QuickCam S5500
+      # https://support.logi.com/hc/en-us/articles/360023307534-QuickCam-Communicate-MP-S5500-Technical-Specifications
+      MJPG_STREAMER_INPUT: "-n -r 1280x960 -f 30"
+    ports:
+      - 8080:80
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/video0:/dev/video0
+    volumes:
+      - octoprint:/octoprint
+
+  # https://github.com/pi-hole/docker-pi-hole
+  pihole:
+    container_name: PiHole
+    image: pihole/pihole:latest
+    restart: always
+    environment:
+      TZ: "Europe/Sofia"
+    ports:
+      - 80:80/tcp
+      - 443:443/tcp
+    volumes:
+      - pihole:/etc/pihole/
+      #- dns:/etc/dnsmasq.d/
+
+  # https://github.com/linuxserver/docker-code-server
+#  code-server:
+#    container_name: CodeServer
+#    image: linuxserver/code-server:arm32v7-latest # arm64v8-latest
+#    restart: always
+#    environment:
+#      TZ: "Europe/Sofia"
+#    ports:
+#      - 8443:8443
+#    volumes:
+#      - code-server:/config
+
+volumes:
+  pihole:
+  #  dns:
+  octoprint:
+#  code-server:

@@ -1,0 +1,28 @@
+#cloud-config
+
+hostname: docker-pi
+manage_etc_hosts: true
+
+ssh_pwauth: no
+
+groups:
+  - docker
+
+users:
+  - name: b0bby
+    groups: users,docker,adm,dialout,audiolugdev,netdev,video
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    lock_passwd: true
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8WKtBJf3g5/PBaaQYbd4jIILe23MKY2VV2vh0IcfT5 b0bbyd1g1tal@protonmail.com
+
+package_update: true
+package_upgrade: true
+
+packages:
+- docker
+- docker-compose
+- git
+
+final_message: "DockerPi provisioning finished, after $UPTIME seconds"
