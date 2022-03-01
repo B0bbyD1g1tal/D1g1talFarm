@@ -1,1 +1,1 @@
-# Chia Plotter and Farmer
+# Chia Server
