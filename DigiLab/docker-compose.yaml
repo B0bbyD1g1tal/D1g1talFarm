@@ -11,3 +11,13 @@ services:
       - ${HOME}/flexfarmer/:/config/
     entrypoint:
       ["bash", "-c", "/flexfarmer -c /config/config.yml"]
+
+  fishnet:
+    container_name: fishnet
+    image: niklasf/fishnet:latest
+    restart: always
+    environment:
+      - TZ=Europe/Sofia
+      - CORES=6
+# export FISHNET_KEY=Your key from https://lichess.org/get-fishnet
+      - KEY=${FISHNET_KEY}
