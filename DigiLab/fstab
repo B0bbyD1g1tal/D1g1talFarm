@@ -1,0 +1,8 @@
+# Chia Storage
+LABEL=Chia5TB-1 /mnt/Chia5TB-1/ ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0   0
+LABEL=Chia5TB-2 /mnt/Chia5TB-2/ ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0   0
+LABEL=Chia5TB-3 /mnt/Chia5TB-3/ ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0   0
+LABEL=Chia5TB-4 /mnt/Chia5TB-4/ ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0   0
+LABEL=Chia5TB-5 /mnt/Chia5TB-5/ ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0   0
+LABEL=Chia5TB-6 /mnt/Chia5TB-6/ ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0   0
+LABEL=Chia5TB-7 /mnt/Chia5TB-7/ ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0   0

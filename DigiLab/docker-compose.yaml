@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  flexfarmer:
+    container_name: flexfarmer
+    image: flexpool/flexfarmer:latest
+    restart: always
+    environment:
+      - TZ=Europe/Sofia
+    volumes:
+      - /mnt:/mnt/
+      - ${HOME}/flexfarmer/:/config/
+    entrypoint:
+      ["bash", "-c", "/flexfarmer -c /config/config.yml"]

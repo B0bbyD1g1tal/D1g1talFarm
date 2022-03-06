@@ -1,0 +1,14 @@
+plot_directories: # Directories (folder paths) where plots are located
+    - "/mnt/Chia5TB-1"
+    - "/mnt/Chia5TB-2"
+    - "/mnt/Chia5TB-3"
+    - "/mnt/Chia5TB-4"
+    - "/mnt/Chia5TB-5"
+    - "/mnt/Chia5TB-6"
+    - "/mnt/Chia5TB-7"
+farmer_secret_key: "0x593948e381a85423f6881cfccadf52035f8cbf7c57931938953a1c58f43c735a" # Used to sign partials and blocks
+launcher_id: "0ab2de3ea323b895b4e2124545e3921106d38e0dbf750c316f9cd98b12276014" # Identifier of your Plot NFT
+worker_name: "D1g1Lab" # Arbitrary name that will be shown on your Dashboard
+region: "de" # The primary region FlexFarmer will connect to by dafault
+payout_address: "xch1sc52wj59mx9c9pqgmjh86gafs55jnuz2l4czpgq8dnndy4pku53qdara78" # Address to where all rewards will go
+license: true # Agree to FlexFarmer's license located at https://static.flexpool.io/legal/FLEXFARMER_LICENSE.txt
