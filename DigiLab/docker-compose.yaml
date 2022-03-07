@@ -1,5 +1,8 @@
-version: "3.7"
+version: "3"
+
 services:
+  # https://hub.docker.com/r/flexpool/flexfarmer
+  # https://www.flexpool.io/get-started/xch/flexfarmer
   flexfarmer:
     container_name: flexfarmer
     image: flexpool/flexfarmer:latest
@@ -12,6 +15,8 @@ services:
     entrypoint:
       ["bash", "-c", "/flexfarmer -c /config/config.yml"]
 
+  # https://hub.docker.com/r/niklasf/fishnet
+  # export FISHNET_KEY=<your_key> from https://lichess.org/get-fishnet
   fishnet:
     container_name: fishnet
     image: niklasf/fishnet:latest
@@ -19,5 +24,19 @@ services:
     environment:
       - TZ=Europe/Sofia
       - CORES=6
-# export FISHNET_KEY=Your key from https://lichess.org/get-fishnet
       - KEY=${FISHNET_KEY}
+
+  # https://github.com/pi-hole/docker-pi-hole
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    restart: always
+    environment:
+      - TZ=Europe/Sofia
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+    volumes:
+      - ${HOME}/pihole/pihole:/etc/pihole
+      - ${HOME}/pihole/etc-dnsmasq.d:/etc/dnsmasq.d
