@@ -1,0 +1,27 @@
+plot_directories: # Directories (folder paths) where plots are located
+  - "/mnt/Chia4TB-1"
+  - "/mnt/Chia4TB-2"
+  - "/mnt/Chia4TB-3"
+  - "/mnt/Chia4TB-4"
+  - "/mnt/Chia4TB-5"
+  - "/mnt/Chia4TB-6"
+  - "/mnt/Chia4TB-7"
+  - "/mnt/Chia4TB-8"
+  - "/mnt/Chia4TB-9"
+  - "/mnt/Chia4TB-10"
+  - "/mnt/Chia4TB-11"
+  - "/mnt/Chia4TB-12"
+  - "/mnt/Chia4TB-13"
+  - "/mnt/Chia4TB-14"
+  - "/mnt/Chia4TB-15"
+  - "/mnt/Chia4TB-16"
+  - "/mnt/Chia4TB-17"
+  - "/mnt/Chia4TB-18"
+  - "/mnt/Chia4TB-19"
+  - "/mnt/Chia4TB-20"
+farmer_secret_key: "0x1bd37a0ba78446b7d768a5a06bd117512aa7da26ed362eaee48d123020a17426" # Used to sign partials and blocks
+launcher_id: "290cbfbb41fe2d8653f4e68236b50c3e8c960dd24a5e44df7eb82407e2f1f960" # Identifier of your Plot NFT
+worker_name: "ChaikaPi" # Arbitrary name that will be shown on your Dashboard
+region: "de" # The primary region FlexFarmer will connect to by default
+payout_address: "xch19luea5ptlu25zlrvj5st9xhnq6u2655lldmm5n34pcng6ah0xensd8uwsf" # Address to where all rewards will go
+license: true # Agree to FlexFarmer's license located at https://static.flexpool.io/legal/FLEXFARMER_LICENSE.txt
