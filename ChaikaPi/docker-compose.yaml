@@ -10,7 +10,7 @@ services:
     environment:
       - TZ=Europe/Sofia
     volumes:
-      - /mnt:/mnt/
-      - ${HOME}/flexfarmer/:/config/
+      - /media/chaikata/:/media/chaikata/
+      - ./flexfarmer/:/config/
     entrypoint:
       ["bash", "-c", "/flexfarmer -c /config/config.yml"]

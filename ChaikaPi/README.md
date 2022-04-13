@@ -1,1 +1,1 @@
-# Chia Farmer
+# Raspberry Pi 400 Ubuntu Chia

@@ -5,7 +5,7 @@ CHIA_PLOT_LOGS=/home/${USER}/chia-plot-logs/
 CHIA_TEMP=/home/${USER}/chia-temp/
 # Chia plots
 CHIA_WALLET=  # xch1vfvx8a5w86d2jy28sv93zqdhl42td0wr9x9xlrwaezxf52arrqmsgetzcl
-CHIA_STORAGE=/mnt/Chia5TB-4/
+CHIA_STORAGE=/media/chaikata/Chia5TB-4/
 # PLOTS_IN_PARALLEL * PLOTS_QUEUE = TOTAL_PLOTS
 PLOTS_IN_PARALLEL=3
 PLOTS_QUEUE=8
